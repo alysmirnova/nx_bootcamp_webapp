@@ -10,6 +10,7 @@ COPY . .
 RUN hugo
 
 FROM nginx
+COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=generator /public /usr/share/nginx/html
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
