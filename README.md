@@ -8,6 +8,8 @@
 
 ## Запуск
 
+```git clone --recurse-submodules --remote-submodules git@github.com:alysmirnova/nx_bootcamp_webapp.git``` - клонирование репозитория.
+
 ```bash build.sh``` - команда для сборки сайта и создания образа.
 
 ```bash run.sh``` - команда для создания контейнера и запуска сайта. 
