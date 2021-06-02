@@ -12,5 +12,3 @@ RUN hugo -D
 
 FROM nginx:alpine
 COPY --from=generator /public /usr/share/nginx/html
-
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
