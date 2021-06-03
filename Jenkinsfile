@@ -14,12 +14,12 @@ pipeline {
                  reference: '', 
                  trackingSubmodules: false]], 
                  userRemoteConfigs: [[url: 'https://github.com/alysmirnova/nx_bootcamp_webapp.git']]])
-                docker build -t nx_bootcamp_webapp .
+                sh 'build.sh'
             }
         }
         stage('Run') {
             steps {
-                docker run --rm -p 80:80 nx_bootcamp_webapp
+                sh 'run.sh'
             }
         }
     }
